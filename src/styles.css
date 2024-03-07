@@ -39,18 +39,71 @@
     https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors
 */
 
-.two-column-grid__expand-two {}
+.two-column-grid__expand-two {
+  display: grid;
+  gap: 10px;
 
-.three-column-grid {}
+  grid-template-columns: 200px 1fr;
+}
 
-.three-column-grid__expand-two {}
+.three-column-grid {
+  display: grid;
+  gap: 10px;
 
-.five-column-grid {}
+  grid-template-columns: repeat(3, 1fr);
+}
 
-.center-grid {}
+.three-column-grid__expand-two {
+  display: grid;
+  gap: 10px;
 
-.grid-in-grid-1 {}
+  grid-template-columns: 50px 1fr 50px;
+}
 
-.grid-in-grid-2 {}
+.five-column-grid {
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.center-grid {
+  display: grid;
+
+  place-items: center;
+}
+
+.center-grid div{
+  width: 300px;
+
+}
+
+.grid-in-grid-1 {
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-in-grid-1 .box{
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-in-grid-2 {
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: 80px 1fr 200px;
+}
+
+.grid-in-grid-2 .box {
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
 
 .grid-madness {}
